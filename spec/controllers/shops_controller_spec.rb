@@ -2,52 +2,52 @@ require 'spec_helper'
 
 describe ShopsController do
 
-  describe "GET 'index'" do
+  describe "#index" do
     it "returns http success" do
-      get 'index'
+      get(:index)
       response.should be_success
     end
   end
 
-  describe "GET 'new'" do
+  describe "#new" do
     it "returns http success" do
-      get 'new'
+      get(:new)
       response.should be_success
     end
   end
 
-  describe "GET 'create'" do
+  describe "#create" do
     it "returns http success" do
-      get 'create'
+      post(:create)
+      response.should redirect_to(shops_path)
+    end
+  end
+
+  describe "#show" do
+    it "returns http success" do
+      get(:show, :id => 5)
       response.should be_success
     end
   end
 
-  describe "GET 'show'" do
+  describe "#edit" do
     it "returns http success" do
-      get 'show'
+      get(:edit, :id => 5)
       response.should be_success
     end
   end
 
-  describe "GET 'edit'" do
+  describe "#update" do
     it "returns http success" do
-      get 'edit'
-      response.should be_success
+      put(:update, :id => 5)
+      response.should redirect_to(shops_path)
     end
   end
 
-  describe "GET 'update'" do
+  describe "#destroy" do
     it "returns http success" do
-      get 'update'
-      response.should be_success
-    end
-  end
-
-  describe "GET 'destroy'" do
-    it "returns http success" do
-      get 'destroy'
-      response.should be_success
+      delete(:destroy, :id => 5)
+      response.should redirect_to(shops_path)
     end
   end
 

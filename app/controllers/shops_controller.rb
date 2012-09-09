@@ -6,6 +6,7 @@ class ShopsController < ApplicationController
   end
 
   def create
+    redirect_to shops_path
   end
 
   def show
@@ -15,8 +16,10 @@ class ShopsController < ApplicationController
   end
 
   def update
+    redirect_to shops_path
   end
 
   def destroy
+    redirect_to shops_path
   end
 end
