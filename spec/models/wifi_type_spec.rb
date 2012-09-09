@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe OutletType do
+describe WifiType do
   it { should have_many :shops }
 end

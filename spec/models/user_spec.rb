@@ -1,5 +1,6 @@
 require 'spec_helper'
 
-describe OutletType do
+describe User do
   it { should have_many :shops }
+  it { should have_many :reviews }
 end
