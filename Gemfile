@@ -6,6 +6,7 @@ gem 'pg'
 gem 'bcrypt-ruby'
 gem 'jquery-rails'
 gem 'haml-rails'
+gem 'thin'
 
 group :assets do
   gem 'sass-rails'
