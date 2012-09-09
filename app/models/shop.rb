@@ -7,6 +7,6 @@ class Shop < ActiveRecord::Base
   belongs_to :wifi_type
   belongs_to :outlet_type
 
-  validates_presence_of :added_by, :menu_type, :wifi_type, :outlet_type,
-                        :address, :name, :description
+  validates_presence_of :menu_type, :wifi_type, :outlet_type, :address, :name,
+                        :description
 end
