@@ -5,4 +5,7 @@ class Review < ActiveRecord::Base
   belongs_to :user
   belongs_to :crowd_type
   belongs_to :wifi_quality
+
+  validates_presence_of :shop, :body, :title, :user, :crowd_type, :wifi_quality
+  validates :user_id, :uniqueness => { :scope => :shop_id }
 end
