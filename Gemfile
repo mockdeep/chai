@@ -22,6 +22,7 @@ end
 
 group :test do
   gem 'spork'
+  gem 'rb-inotify'
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'simplecov'
