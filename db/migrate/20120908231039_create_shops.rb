@@ -6,9 +6,6 @@ class CreateShops < ActiveRecord::Migration
       t.string :website
       t.string :address
       t.string :hours
-      t.integer :wifi_type_id
-      t.integer :menu_type_id
-      t.integer :outlets_type_id
       t.integer :added_by_id
 
       t.timestamps

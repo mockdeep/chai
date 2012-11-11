@@ -11,36 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120909002026) do
-
-  create_table "crowd_types", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "menu_types", :force => true do |t|
-    t.string   "name"
-    t.string   "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  create_table "outlet_types", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+ActiveRecord::Schema.define(:version => 20120908231751) do
 
   create_table "reviews", :force => true do |t|
     t.integer  "user_id"
     t.integer  "shop_id"
     t.text     "body"
-    t.integer  "crowd_type_id"
-    t.integer  "wifi_quality_id"
     t.string   "title"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "shops", :force => true do |t|
@@ -49,12 +28,9 @@ ActiveRecord::Schema.define(:version => 20120909002026) do
     t.string   "website"
     t.string   "address"
     t.string   "hours"
-    t.integer  "wifi_type_id"
-    t.integer  "menu_type_id"
-    t.integer  "outlet_type_id"
     t.integer  "added_by_id"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -63,19 +39,6 @@ ActiveRecord::Schema.define(:version => 20120909002026) do
     t.string   "password_digest"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
-  end
-
-  create_table "wifi_qualities", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "wifi_types", :force => true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
   end
 
 end
