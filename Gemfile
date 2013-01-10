@@ -34,4 +34,5 @@ group :test do
   gem 'guard-spork'
   gem 'simplecov'
   gem 'shoulda'
+  gem 'fakeweb'
 end
