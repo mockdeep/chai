@@ -4,10 +4,12 @@ ruby '1.9.3'
 
 gem 'rails'
 
-gem 'pg'
 gem 'bcrypt-ruby'
-gem 'jquery-rails'
+gem 'foreigner'
 gem 'haml-rails'
+gem 'jquery-rails'
+gem 'pg'
+gem 'strong_parameters'
 gem 'thin'
 
 group :assets do
