@@ -10,6 +10,7 @@ describe User do
     it { should validate_uniqueness_of :email }
     it { should validate_uniqueness_of :username }
 
-    it { should validate_format_of(:email).with(Constants::EMAIL_REGEX) }
+    xit { should allow_value('valid@email.com').for(:email) }
+    xit { should_not allow_value('in va + id').for(:email) }
   end
 end
